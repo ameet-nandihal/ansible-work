@@ -1,0 +1,7 @@
+web1 ansible_ssh_host=127.0.0.1 
+
+[webhost]
+web1
+
+[allservers:children]
+webhost

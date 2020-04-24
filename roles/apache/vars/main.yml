@@ -1,0 +1,6 @@
+---
+# vars file for apache
+
+src_path: /home/ansiblevm
+dest_path: /var/www/html
+

@@ -1,0 +1,15 @@
+---
+# tasks file for user
+
+
+- name: create/delete a user
+  #user: name= "{{ item }}" state=absent
+  #with_items:  "{{ username }}"
+  user: name={{ item }}  state=present
+  with_items:
+    - webhost_username
+    - all_username
+    - web1_username
+  tags:
+  - userMgmt
+

@@ -1,0 +1,15 @@
+---
+# tasks file for apache
+
+- include: htmlDeploy.yml
+
+- name: Install Apache and Configure
+  apt: name=apache2 state=present
+  tags:
+  - installApache
+
+- name: Start Apache
+  service: name=apache2 state=started enabled=yes
+  tags:
+  - apacheStart
+
